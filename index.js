@@ -15,7 +15,7 @@ connection
 
     app.use('/api', api);
 
-    app.listen(8080);
+    app.listen(process.env.PORT || 8080);
   })
   .catch(err => {console.error(`Unable to connect ${err}`)});
 
