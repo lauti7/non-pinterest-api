@@ -1,4 +1,4 @@
-const Like = require('../Models/like');
+const Like = require('../models/Like');
 
 const getUserLikes = (req, res) => {
   const userId = req.params.userId;
