@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const connection = require('../database');
-const User = require('./user');
+// const User = require('./user');
 
 const Like = connection.define('like', {
   url: {
