@@ -12,7 +12,7 @@ const Like = connection.define('like', {
     allowNull: false
   },
   userId:{
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
     allowNull: false
   }
 });
