@@ -3,7 +3,6 @@ const Like = require('../Models/Like');
 const getUserLikes = (req, res) => {
   const userId = req.params.userId;
 
-  console.log(userId);
 
   Like.findAll({where: {userId}})
       .then(likes => {
@@ -18,7 +17,6 @@ const setUserLike = (req, res) => {
   const likeIsUnique = () => {
     return Like.count({where: {url, urlFull, userId}})
               .then(count => {
-                console.log(count);
                 if(count != 0){
                   return false
                 }
@@ -27,7 +25,6 @@ const setUserLike = (req, res) => {
   }
 
   likeIsUnique().then(likeUnique => {
-    console.log(likeUnique);
     if (likeUnique === true) {
       Like.create({url, urlFull, userId})
           .then(like => {
