@@ -19,6 +19,6 @@ connection
   })
   .catch(err => {console.error(`Unable to connect ${err}`)});
 
-connection.sync()
+connection.sync({force: true})
           .then(() => {console.log('success')})
           .catch(err => console.error(err));

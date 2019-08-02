@@ -3,6 +3,8 @@ const Like = require('../Models/Like');
 const getUserLikes = (req, res) => {
   const userId = req.params.userId;
 
+  console.log(userId);
+
   Like.findAll({where: {userId}})
       .then(likes => {
         res.json({response: likes})
