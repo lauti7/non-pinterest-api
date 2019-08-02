@@ -2,4 +2,3 @@ node_modules/
 .DS_STORE
 controllers/userController.js
 models/User.js
-database.js
