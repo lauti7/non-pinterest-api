@@ -5,11 +5,15 @@ const api = require('./Routes/index');
 const connection = require('./database');
 const app = express();
 
+const corsOptions = {
+  origin: 'https://non-pinterest-app.herokuapp.com/',
+}
+
 
 connection
   .authenticate()
   .then(() => {
-    app.use(cors());
+    app.use(cors(corsOptions));
     app.use(bodyParser.urlencoded({extended: false}));
     app.use(bodyParser.json());
 
