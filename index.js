@@ -6,7 +6,7 @@ const connection = require('./database');
 const app = express();
 
 const corsOptions = {
-  origin: 'https://non-pinterest-app.herokuapp.com/',
+  origin: 'https://non-pinterest-app.herokuapp.com',
 }
 
 
